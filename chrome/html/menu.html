@@ -1,17 +1,33 @@
+<html>
 <head>
   <link href="../css/amatsu.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
+<div id="bodywrap">
+
   <div class="logo">
-      <img alt="Amatsukaze" src="{% static '../img/amatsu_logo.png' %}" width="200"/>
+      <img alt="Amatsukaze" src="../img/amatsu_logo.png" width="200"/>
   </div>
+
 
   <div class="intake">
-    Link to shorten<br />
-    <input type="text"><br />
+      Link to shorten<br />
+      <input id="url" class="search center-block intake" type="text" placeholder="Shorten your URL!"><br />
   </div>
 
-  Shortened Link<br />
-  <input type="text">
+
+  <div class="outtake">
+    Shortened link<br />
+    <input id="output" type="text" class="outtake" placeholder="Shortened URLs come out here!"/>
+  </div>
+  <br />
+
+
+  <div class="options">
+      Custom URL: http://amat.su/ <input id="customURL" class="customlink" type="text" placeholder="Custom URL between 4-32 Characters"/><br />
+    <input type="checkbox" id="addKaze" value="add"> Add /kaze/ to URL
+  </div>
+</div>
 </body>
+</html>
