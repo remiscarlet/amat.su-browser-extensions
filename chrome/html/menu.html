@@ -1,7 +1,10 @@
 <html>
 <head>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/funcs.js"></script>
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="../css/amatsu.css" rel="stylesheet" type="text/css" />
-
 </head>
 <body>
 <div id="bodywrap">
@@ -13,7 +16,7 @@
 
   <div class="intake">
       Link to shorten<br />
-      <input id="url" class="search center-block intake" type="text" placeholder="Shorten your URL!"><br />
+      <input id="url" class="search center-block intake" type="text" placeholder="Shorten your URL!">
   </div>
 
 
@@ -23,11 +26,17 @@
   </div>
   <br />
 
-
   <div class="options">
-      Custom URL: http://amat.su/ <input id="customURL" class="customlink" type="text" placeholder="Custom URL between 4-32 Characters"/><br />
-    <input type="checkbox" id="addKaze" value="add"> Add /kaze/ to URL
+    <button type="button" class="btn btn-info opbut" data-toggle="collapse" data-target="#opbox">Options</button>
+    <button type="button" class="btn btn-info" id="submitButton">Shorten</button>
+      <br />
+
+    <div id="opbox" class="collapse">
+        Custom URL: http://amat.su/ <input id="customURL" class="customlink" type="text" placeholder="Custom URL between 4-32 Characters"/><br />
+      <input type="checkbox" id="addKaze" value="add"> Add /kaze/ to URL
+    </div>
   </div>
+  <br />
 </div>
 </body>
 </html>

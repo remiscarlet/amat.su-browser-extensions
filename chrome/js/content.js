@@ -8,3 +8,7 @@ chrome.runtime.onMessage.addListener(
     }
   }
 );
+
+$('#submitButton').on("click",function(){
+  alert("a");
+})
