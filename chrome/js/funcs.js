@@ -2,7 +2,7 @@ $( document ).ready(function() {
   console.log("load");
   $('#submitButton').on("click",function(){
     $.ajax({
-            url: "http://localhost:8000/api/",
+            url: "http://amat.su/api/",
             type: "POST",
             crossDomain: true,
             dataType: "json",
@@ -15,9 +15,7 @@ $( document ).ready(function() {
               $('#output').val(resp.responseText);
             },
             error: function(resp){
-              console.log("a");
               var addKaze = $('#addKaze').is(":checked");
-              console.log(addKaze);
               var data = resp.responseText
               if (addKaze){
                 var split = data.split("/")
@@ -25,10 +23,8 @@ $( document ).ready(function() {
               }
               $('#output').val(data);
 
-              console.log(data);
               //$('#output').val("Oops");
             }
           });
-    console.log("abc");
   });
 });
