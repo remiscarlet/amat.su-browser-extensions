@@ -3,7 +3,9 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/funcs.js"></script>
+  <script src="../js/clipboard.min.js"></script>
   <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
   <link href="../css/amatsu.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -22,7 +24,10 @@
 
   <div class="outtake">
     Shortened link<br />
-    <input id="output" type="text" class="outtake" placeholder="Shortened URLs come out here!"/>
+    <input id="output" type="text" class="outtake" placeholder="Shortened URLs come out here!"/><br />
+    <button id="copyButton" class="copybut clipboard" data-clipboard-target="#output">
+      Copy
+    </button>
   </div>
   <br />
 

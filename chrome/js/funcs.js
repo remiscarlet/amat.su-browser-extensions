@@ -1,5 +1,15 @@
 $( document ).ready(function() {
   console.log("load");
+  var clipboard = new Clipboard('.clipboard');
+  clipboard.on('success', function(e) {
+      $("#copyButton").html("Copied!");
+      setTimeout(changeBackText,3000);
+  });
+  clipboard.on('error', function(e) {
+      console.error('Action:', e.action);
+      console.error('Trigger:', e.trigger);
+  });
+
   chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     var url = tabs[0].url;
     $('#url').val(url);
@@ -32,3 +42,8 @@ $( document ).ready(function() {
           });
   });
 });
+
+
+function changeBackText(){
+  $("#copyButton").html("Copy");
+};
