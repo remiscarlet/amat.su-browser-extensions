@@ -1,5 +1,9 @@
 $( document ).ready(function() {
   console.log("load");
+  chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+    var url = tabs[0].url;
+    $('#url').val(url);
+  });
   $('#submitButton').on("click",function(){
     $.ajax({
             url: "http://amat.su/api/",

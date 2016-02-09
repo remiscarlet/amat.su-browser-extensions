@@ -9,6 +9,9 @@
   "background": {
     "scripts": ["js/background.js"]
   },
+  "permissions": [
+    "tabs"
+  ],
   "content_scripts": [
     {
       "matches": [
