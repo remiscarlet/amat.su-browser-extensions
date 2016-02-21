@@ -3,12 +3,18 @@
   "name": "Amat.su/kaze!",
   "short_name": "Amat.su",
   "version": "0.1",
+  "applications": {
+    "gecko": {
+      "id": "amatsukaze.browser.extensions@amat.su",
+      "update_url": "https://github.com/remiscarlet/amat.su-browser-extensions/tree/master"
+    }
+  },
   "browser_action": {
     "default_icon": "img/icon2.png",
     "default_popup": "html/menu.html"
   },
   "background": {
-    "scripts": ["js/jquery.min.js","js/background.js"]
+    "scripts": ["js/background.js"]
   },
   "permissions": [
     "tabs",

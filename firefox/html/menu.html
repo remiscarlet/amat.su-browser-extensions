@@ -1,0 +1,47 @@
+<html>
+<head>
+  <script src="http://amat.su/static/js/jquery.min.js"></script>
+  <script src="http://amat.su/static/js/bootstrap.min.js"></script>
+  <script src="../js/funcs.js"></script>
+  <script src="http://amat.su/static/js/clipboard.min.js"></script>
+  <link href="http://amat.su/static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+  <link href="../css/amatsu.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="bodywrap">
+
+  <div class="logo">
+      <img alt="Amatsukaze" src="../img/amatsu_logo.png" width="200"/>
+  </div>
+
+
+  <div class="intake">
+      Link to shorten<br />
+      <input id="url" class="search center-block intake" type="text" placeholder="Shorten your URL!">
+  </div>
+
+
+  <div class="outtake">
+    Shortened link<br />
+    <input id="output" type="text" class="outtake" placeholder="Shortened URLs come out here!"/><br />
+    <button id="copyButton" class="copybut clipboard" data-clipboard-target="#output">
+      Copy
+    </button>
+  </div>
+  <br />
+
+  <div class="options">
+    <button type="button" class="btn btn-info opbut" data-toggle="collapse" data-target="#opbox">Options</button>
+    <button type="button" class="btn btn-info" id="submitButton">Shorten</button>
+      <br />
+
+    <div id="opbox" class="collapse">
+        Custom URL: http://amat.su/ <input id="customURL" class="customlink" type="text" placeholder="Custom URL between 4-32 Characters"/><br />
+      <input type="checkbox" id="addKaze" value="add"> Add /kaze/ to URL
+    </div>
+  </div>
+  <br />
+</div>
+</body>
+</html>
